@@ -19,19 +19,15 @@ def check_for_shutdown():
         hb_data_string = hb_data.decode("utf-8")
         if 'con-res 0xFE' in hb_data_string:
             print('shutting down')
+            send_hb = sock2.sendto('con-res 0xFF'.encode("utf-8"), server_address2)
+            sock2.close()
+            sock.close()
 
 
 def heartbeat(n, name):
     while True:
-        send_hb = sock.sendto(name.encode("utf-8"), server_address2)
+        send_hb = sock2.sendto(name.encode("utf-8"), server_address2)
         time.sleep(n)
-        """try:
-            hb_data, hb_server = sock2.recvfrom(4096)
-            hb_data_string = data.decode("utf-8")
-            if 'con-res 0xFE' in hb_data_string:
-                print('shutting down')
-        finally:
-            print('finally shutting down')"""
 
 
 try:
@@ -53,6 +49,8 @@ try:
             amount_of_packages = 1 / float(parser.get('setting', 'pps'))
             t = threading.Thread(target=heartbeat, name='con-h 0x00', args=(amount_of_packages, 'con-h 0x00'))
             t.start()
+            t2 = threading.Thread(target=check_for_shutdown)
+            t2.start()
 
 finally:
     if not handshake_check:
@@ -74,6 +72,3 @@ while handshake_check:
         #   Printing respond from server
         received_message = decoded_res[decoded_res.index('=') + 1:]
         print(received_message)
-
-
-

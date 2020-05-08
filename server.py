@@ -1,6 +1,5 @@
 import socket
 import threading
-import time
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 server_address = (socket.gethostbyname(socket.gethostname()), 10000)
 sock.bind(server_address)
@@ -22,7 +21,12 @@ def check_heartbeat():
         except socket.timeout:
             print('shutdown')
             shutdown_message = 'con-res 0xFE'
-            res = sock.sendto(shutdown_message.encode("utf-8"), address)
+            res = sock2.sendto(shutdown_message.encode("utf-8"), address)
+            data, address = sock2.recvfrom(4096)
+            hb_data_string = data.decode("utf-8")
+            if 'con-res 0xFF' in hb_data_string:
+                handshake_function()
+                break
 
 
 def handshake_function():
