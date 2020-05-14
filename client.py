@@ -46,7 +46,7 @@ try:
         sent = sock.sendto(client_accept.encode("utf-8"), server_address)
         handshake_check = True
         if parser.get('setting', 'KeepALive') == 'True':
-            amount_of_packages = 1 / float(parser.get('setting', 'pps'))
+            amount_of_packages = 3
             t = threading.Thread(target=heartbeat, name='con-h 0x00', args=(amount_of_packages, 'con-h 0x00'))
             t.start()
             t2 = threading.Thread(target=check_for_shutdown)
