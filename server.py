@@ -1,5 +1,6 @@
 import socket
 import threading
+import re
 import time
 from configparser import ConfigParser
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -15,6 +16,8 @@ shutdown_switch = False
 spam_count = 0
 parser = ConfigParser()
 parser.read('opt.conf')
+no_spam_detected = True
+check_count = -2
 
 
 def check_heartbeat():
@@ -55,6 +58,7 @@ def handshake_function():
             t.start()
             t2 = threading.Thread(target=check_for_spam)
             t2.start()
+            reset_spam()
             check_first_message()
 
 
@@ -71,25 +75,34 @@ def check_first_message():
 def check_for_spam():
     while True:
         global spam_count
-        time.sleep(1)
-        if spam_count >= int(parser.get('setting', 'max_amount_of_packages')):
-            print('SPAM')
-        spam_count = 0
+        if spam_count > int(parser.get('setting', 'max_amount_of_packages')):
+            global no_spam_detected
+            no_spam_detected = False
+
+
+def reset_spam():
+    threading.Timer(1.0, reset_spam).start()
+    global spam_count
+    spam_count = 0
+    global no_spam_detected
+    no_spam_detected = True
 
 
 def send_message(insert_decoded_msg, insert_address):
-    pre_count = int(insert_decoded_msg[4])
-    counter = int(insert_decoded_msg[4]) + 1
-    if counter - pre_count == 1 and insert_decoded_msg.startswith('msg-'):
+    global check_count
+    pre_count = int(re.search('msg-(.*)=', insert_decoded_msg).group(1))
+    counter = pre_count + 1
+    if pre_count + check_count == -2 and insert_decoded_msg.startswith('msg-'):
         # Respond to client
         respond_for_message = 'res-' + str(counter) + '=I am server'
         res = sock.sendto(respond_for_message.encode("utf-8"), insert_address)
         global spam_count
         spam_count += 1
+        check_count -= 2
 
 
 def message_function():
-    while True:
+    while no_spam_detected:
         #   Read client message
         msg, address = sock.recvfrom(4096)
         decoded_msg = msg.decode("utf-8")

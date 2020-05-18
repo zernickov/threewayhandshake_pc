@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0580a774-5d52-41e6-b789-dc95257bb893" name="Default Changelist" comment="">
+    <list default="true" id="0580a774-5d52-41e6-b789-dc95257bb893" name="Default Changelist" comment="spam">
+      <change afterPath="$PROJECT_DIR$/hack.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opt.conf" beforeDir="false" afterPath="$PROJECT_DIR$/opt.conf" afterDir="false" />
@@ -58,7 +59,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.client">
+  <component name="RunManager" selected="Python.hack">
     <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="threewayhandshake" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,6 +104,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="hack" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="threewayhandshake" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hack.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="threewayhandshake" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,8 +150,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.client" />
+        <item itemvalue="Python.hack" />
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.client" />
         <item itemvalue="Python.client2" />
       </list>
     </recent_temporary>
@@ -147,8 +171,19 @@
       <workItem from="1588933925654" duration="199000" />
       <workItem from="1588934133844" duration="213000" />
       <workItem from="1588934355773" duration="5142000" />
-      <workItem from="1589492910662" duration="2513000" />
+      <workItem from="1589492910662" duration="2622000" />
+      <workItem from="1589641167828" duration="691000" />
+      <workItem from="1589808110776" duration="192000" />
+      <workItem from="1589829660612" duration="5081000" />
     </task>
+    <task id="LOCAL-00001" summary="spam">
+      <created>1589495460738</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589495460738</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +201,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="spam" />
+    <option name="LAST_COMMIT_MESSAGE" value="spam" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="979" y="401" key="#Notifications" timestamp="1588933946921">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -175,30 +214,34 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="739" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1588934158809" />
-    <state width="1877" height="119" key="GridCell.Tab.0.bottom" timestamp="1589495378731">
+    <state width="1877" height="310" key="GridCell.Tab.0.bottom" timestamp="1589834602435">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="119" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1589495378731" />
+    <state width="1877" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1589834602435" />
     <state width="1398" height="225" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588331961070" />
-    <state width="1877" height="119" key="GridCell.Tab.0.center" timestamp="1589495378731">
+    <state width="1877" height="310" key="GridCell.Tab.0.center" timestamp="1589834602435">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="119" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1589495378731" />
+    <state width="1877" height="310" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1589834602435" />
     <state width="1398" height="225" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1588331961070" />
-    <state width="1877" height="119" key="GridCell.Tab.0.left" timestamp="1589495378731">
+    <state width="1877" height="310" key="GridCell.Tab.0.left" timestamp="1589834602435">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="119" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1589495378731" />
+    <state width="1877" height="310" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1589834602435" />
     <state width="1398" height="225" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1588331961070" />
-    <state width="1877" height="119" key="GridCell.Tab.0.right" timestamp="1589495378731">
+    <state width="1877" height="310" key="GridCell.Tab.0.right" timestamp="1589834602435">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="119" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1589495378731" />
+    <state width="1877" height="310" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1589834602435" />
     <state width="1398" height="225" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1588331961070" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1588934170595">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1588934170595" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1589495466006">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1589495466006" />
     <state x="399" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1584491295982">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -210,9 +253,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/threewayhandshake$client.coverage" NAME="client Coverage Results" MODIFIED="1588273427191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/threewayhandshake_pc$client.coverage" NAME="client Coverage Results" MODIFIED="1589495340520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/threewayhandshake_pc$hack.coverage" NAME="hack Coverage Results" MODIFIED="1589834569073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/threewayhandshake_pc$client.coverage" NAME="client Coverage Results" MODIFIED="1589833317584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/threewayhandshake$server.coverage" NAME="server Coverage Results" MODIFIED="1588273425275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/threewayhandshake_pc$client2.coverage" NAME="client2 Coverage Results" MODIFIED="1588937324573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/threewayhandshake_pc$server.coverage" NAME="server Coverage Results" MODIFIED="1589495336379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/threewayhandshake_pc$server.coverage" NAME="server Coverage Results" MODIFIED="1589834566774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
