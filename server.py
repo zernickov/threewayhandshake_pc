@@ -35,6 +35,8 @@ def check_heartbeat():
             if hb_data_string.startswith('con-res 0xFF'):
                 handshake_function()
                 break
+            else:
+                handshake_function()
 
 
 def handshake_function():

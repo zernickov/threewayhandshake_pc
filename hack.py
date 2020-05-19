@@ -60,7 +60,7 @@ finally:
 
 while handshake_check:
     #   Taking message as input
-    message_input = 'input()'
+    message_input = 'hack'
     #   Sending message to the server
     msg = 'msg-' + str(counter) + '=' + message_input
     sent_msg = sock.sendto(msg.encode("utf-8"), server_address)
