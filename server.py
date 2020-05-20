@@ -44,7 +44,6 @@ def handshake_function():
     data, address = sock.recvfrom(4096)
     data_string = data.decode("utf-8")
     line_split = data_string.find('0')
-    #   TODO tjek hvorfor den ikke kan tage hele ip'en og man er nødt til at sige line_split+1
     received_message = data_string[data_string.index(' ') + line_split+1:]
     #   Check protocol and IP
     if data_string.startswith("com-0") and socket.inet_aton(received_message):
